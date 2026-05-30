@@ -91,7 +91,7 @@ async def handle_all_messages(client, message: Message):
         return
 
     # --- COMMAND 4: .add <name> ---
-    if text.startswith(".add ") or text.startswith("/add "):
+    if text.startswith(".a ") or text.startswith("/a "):
         try:
             shortcut_name = text.split(" ", 1)[1].lower()
             user_states[user_id] = {"action": "waiting_for_msg", "shortcut_name": shortcut_name}
